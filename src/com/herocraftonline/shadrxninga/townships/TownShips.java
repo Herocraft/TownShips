@@ -9,7 +9,8 @@ import org.bukkit.event.Event.Type;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
-import com.herocraftonline.shadrxninga.townships.commands.CommandManager;
+import com.herocraftonline.shadrxninga.townships.command.CommandManager;
+import com.herocraftonline.shadrxninga.townships.command.commands.CreateCommand;
 import com.herocraftonline.shadrxninga.townships.persistence.Town;
 import com.herocraftonline.shadrxninga.townships.persistence.TownManager;
 import com.herocraftonline.shadrxninga.townships.types.TypesManager;
@@ -38,8 +39,8 @@ public class TownShips extends JavaPlugin {
     public void onLoad() {
         System.out.print("TownShips Loading...");
         getDataFolder().mkdirs();
-        this.townManager = new TownManager(this);
-        this.configManager = new ConfigManager(this);
+        townManager = new TownManager(this);
+        configManager = new ConfigManager(this);
 
     }
 
@@ -71,7 +72,7 @@ public class TownShips extends JavaPlugin {
 
     private void registerCommands() {
         // Page 1
-     //   this.commandManager.addCommand(new CreateCommand(this));
+        commandManager.addCommand(new CreateCommand(this));
         log.info("Commands Enabled");
     }
 
@@ -96,11 +97,11 @@ public class TownShips extends JavaPlugin {
     */
     }
     public TownManager getTownManager() {
-        return this.townManager;
+        return townManager;
     }
 
     public TypesManager getTypesManager() {
-        return this.typesManager;
+        return typesManager;
     }
 
     public void setTypesManager(TypesManager typesManager) {
