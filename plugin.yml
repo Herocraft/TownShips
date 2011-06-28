@@ -1,0 +1,11 @@
+name: Townships
+main: com.herocraftonline.shadrxninga.townships.TownShips
+version: 0.0.1
+website: http://www.herocraftonline.com
+author: shadrxninga
+description: Automated TownShips
+commands:
+  town:
+    aliases: ['town']
+    description:
+    usage: /<command>

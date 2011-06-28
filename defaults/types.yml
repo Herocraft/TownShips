@@ -1,0 +1,21 @@
+TownTypes:
+    Town:
+        name: Town
+        order: 1
+        description: The Default Town For HeroCraft
+        title: Mayor
+        cost: 10
+        upkeep: 1
+        radius: 75
+        minSigs: 1
+        maxSigs: 5
+    City:
+        name: City
+        order: 2
+        description: The Default Town For HeroCraft
+        title: City
+        cost: 103
+        upkeep: 1
+        radius: 753
+        minSigs: 1
+        maxSigs: 5
